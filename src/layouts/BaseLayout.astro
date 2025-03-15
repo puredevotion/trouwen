@@ -1,4 +1,6 @@
 ---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
 import "../styles/bootstrap.scss";
 
 const { pageTitle } = Astro.props;
@@ -15,44 +17,25 @@ const { pageTitle } = Astro.props;
     <meta name="description" content="Heleen & Thijs gaan trouwen" />
   </head>
   <body>
+    <Header />
     <div class="container">
-      <header class="d-flex justify-content-center py-3">
-        <ul class="nav nav-pills">
-          {
-            ["Home", "Features", "Pricing", "FAQs", "About"].map((n, i) => (
-              <li class="nav-item">
-                <a
-                  href="#"
-                  class:list={[
-                    "nav-link",
-                    { active: i === 0 },
-                    { "text-black": i === 0 },
-                  ]}
-                >
-                  {n}
-                </a>
-              </li>
-            ))
-          }
-        </ul>
-      </header>
-      <main class="text-center">
-        <slot />
-      </main>
+      <slot />
+      <Footer />
       <script>
         // Import only what you need
-        // import 'bootstrap/js/dist/alert';
-        // import 'bootstrap/js/dist/button';
-        // import 'bootstrap/js/dist/carousel';
-        // import 'bootstrap/js/dist/collapse';
-        // import 'bootstrap/js/dist/dropdown';
-        // import 'bootstrap/js/dist/modal';
-        // import 'bootstrap/js/dist/offcanvas';
-        // import 'bootstrap/js/dist/popover';
-        // import 'bootstrap/js/dist/scrollspy';
-        // import 'bootstrap/js/dist/tab';
-        // import 'bootstrap/js/dist/toast';
-        // import 'bootstrap/js/dist/tooltip';
+        // import "bootstrap/dist/js/bootstrap";
+        //        import "bootstrap/js/dist/alert";
+        //        import "bootstrap/js/dist/button";
+        //        import "bootstrap/js/dist/carousel";
+        import "bootstrap/js/dist/collapse";
+        //        import "bootstrap/js/dist/dropdown";
+        //        import "bootstrap/js/dist/modal";
+        //        import "bootstrap/js/dist/offcanvas";
+        //        import "bootstrap/js/dist/popover";
+        //        import "bootstrap/js/dist/scrollspy";
+        //        import "bootstrap/js/dist/tab";
+        //        import "bootstrap/js/dist/toast";
+        //        import "bootstrap/js/dist/tooltip";
       </script>
     </div>
   </body>
