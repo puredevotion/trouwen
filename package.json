@@ -1,0 +1,21 @@
+{
+  "name": "trouwen",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/preact": "^4.0.5",
+    "astro": "^5.5.2",
+    "bootstrap": "^5.3.3",
+    "preact": "^10.26.4",
+    "sass": "^1.85.1"
+  },
+  "devDependencies": {
+    "@types/bootstrap": "^5.2.10"
+  }
+}
